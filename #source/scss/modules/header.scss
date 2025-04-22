@@ -1,0 +1,29 @@
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  .header_content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+    .logo-link {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .contact-link {
+        margin-left: auto;
+        margin-right: 0;
+      @media (max-width: 991px) {
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+  }
+}
+

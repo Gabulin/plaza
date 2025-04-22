@@ -1,0 +1,100 @@
+.footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    @media (max-width:1200px) {
+        flex-direction: column;
+        justify-content: center;
+    }
+    p {
+      font-size: 1rem;
+      color: var(--black);
+      opacity: 0.7;
+      margin: 0;
+    }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      @media (max-width:768px) {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      a {
+        font-size: 1rem;
+        color: var(--black);
+        opacity: 0.7;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .mediatip-copyright {
+      max-width: 280px;
+      @media (max-width:1200px) {
+        max-width: 100%;
+      }
+      a {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        font-size: 1rem;
+        color: var(--black);
+        opacity: 0.7;
+        img {
+            transition: transform 0.5s ease;
+        }
+        &:hover {
+          text-decoration: underline;
+          img {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+.cookie-notification {
+    position: fixed;
+    background-color: rgba(0, 0, 0, .8);
+    max-width: fit-content;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    color: white;
+    padding: 2rem;
+    z-index: 1000;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 10px;
+}
+.cookie-notification_hidden_yes {
+    display: none;
+}
+.cookie-notification__body {
+    p {
+        margin: 0;
+    }
+    a {
+        color: var(--white);
+        text-decoration: underline;
+        transition: 0.3s ease;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+.cookie-notification__button {
+    background-color: var(--white);
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
